@@ -7,9 +7,9 @@
  * @package Wp_Theme_Boilerplate_by_Mike
  */
 
-if ( ! defined( '_S_VERSION' ) ) {
+if ( ! defined( 'TBM_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.0.0' );
+	define( 'TBM_VERSION', '1.0.0' );
 }
 
 /**
@@ -138,10 +138,10 @@ add_action( 'widgets_init', 'wp_theme_boilerplate_by_mike_widgets_init' );
  * Enqueue scripts and styles.
  */
 function wp_theme_boilerplate_by_mike_scripts() {
-	wp_enqueue_style( 'wp-theme-boilerplate-by-mike-style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_enqueue_style( 'wp-theme-boilerplate-by-mike-style', get_stylesheet_uri(), array(), TBM_VERSION );
 	wp_style_add_data( 'wp-theme-boilerplate-by-mike-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'wp-theme-boilerplate-by-mike-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'wp-theme-boilerplate-by-mike-navigation', get_template_directory_uri() . '/js/navigation.js', array(), TBM_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
