@@ -1,0 +1,269 @@
+/*!************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/FrontScripts/Navbar/Navbar.scss ***!
+  \************************************************************************************************************************************************************************************************************************************************************/
+.nav-container {
+  position: relative;
+}
+
+.main-menu {
+  background-color: #000;
+}
+.main-menu .navbar-brand {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+}
+.main-menu .navbar-brand:hover {
+  color: #ff4b37;
+}
+.main-menu .navbar-brand:hover .navbar-brand-main,
+.main-menu .navbar-brand:hover .navbar-brand-slogan {
+  color: #ff4b37;
+}
+.main-menu .navbar-brand .custom-logo-link img {
+  display: block;
+  width: 100%;
+  max-width: 32px;
+  height: auto;
+}
+.main-menu .navbar-brand .navbar-brand-main {
+  color: #fff;
+  margin-right: 5px;
+}
+.main-menu .navbar-brand .navbar-brand-slogan {
+  color: #fff;
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+.main-menu .navbar-brand .navbar-brand-slogan:before {
+  content: "|";
+  margin-right: 5px;
+}
+.main-menu .nav-item .nav-link {
+  color: #fff;
+}
+.main-menu .nav-item .nav-link:hover {
+  color: #ff4b37;
+}
+.main-menu .nav-item.active .nav-link {
+  color: #d5011d;
+}
+.main-menu .nav-item--icon .nav-link {
+  display: flex;
+  align-items: center;
+}
+.main-menu .navbar-toggler {
+  border: none;
+  color: #fff;
+}
+.main-menu .navbar-toggler:focus {
+  outline: none;
+}
+.main-menu .menu-user-image img {
+  border: solid 2px var(--color-1);
+  border-radius: 50%;
+  margin-right: 5px;
+  width: 2em;
+  height: 2em;
+}
+
+@media (max-width: 1200px) {
+  .navbar-expand-xl {
+    border-bottom: solid 2px var(--color_2);
+    position: -webkit-sticky;
+    position: sticky;
+  }
+  .navbar-expand-xl .collapse-container {
+    position: absolute;
+    top: 100%;
+    left: -100%;
+    width: 100%;
+    height: 92.5vh;
+    transition: all 0.2s linear;
+    opacity: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+  }
+  .navbar-expand-xl .collapse-container:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--volk-black);
+    opacity: 0.9;
+  }
+  .navbar-expand-xl .collapse-container .navbar-collapse {
+    top: 2px;
+    min-width: 250px;
+    height: 100vh;
+    display: block;
+    flex: 0;
+    padding: 0;
+  }
+  .navbar-expand-xl .collapse-container .navbar-collapse .nav-item .nav-link {
+    text-align: center;
+    font-size: 2rem;
+    align-items: center;
+    justify-content: center;
+  }
+  .navbar-expand-xl .collapse-container.show {
+    left: 0;
+    opacity: 1;
+  }
+}
+@media (max-width: 991px) {
+  .navbar-expand-lg {
+    border-bottom: solid 2px var(--color_2);
+    position: -webkit-sticky;
+    position: sticky;
+  }
+  .navbar-expand-lg .collapse-container {
+    position: absolute;
+    top: 100%;
+    left: -100%;
+    width: 100%;
+    height: 92.5vh;
+    transition: all 0.2s linear;
+    opacity: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+  }
+  .navbar-expand-lg .collapse-container:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--volk-black);
+    opacity: 0.9;
+  }
+  .navbar-expand-lg .collapse-container .navbar-collapse {
+    top: 2px;
+    min-width: 250px;
+    height: 100vh;
+    display: block;
+    flex: 0;
+    padding: 0;
+  }
+  .navbar-expand-lg .collapse-container .navbar-collapse .nav-item .nav-link {
+    text-align: center;
+    font-size: 2rem;
+    align-items: center;
+    justify-content: center;
+  }
+  .navbar-expand-lg .collapse-container.show {
+    left: 0;
+    opacity: 1;
+  }
+}
+@media (max-width: 767px) {
+  .navbar-expand-md {
+    border-bottom: solid 2px var(--color_2);
+    position: -webkit-sticky;
+    position: sticky;
+  }
+  .navbar-expand-md .collapse-container {
+    position: absolute;
+    top: 100%;
+    left: -100%;
+    width: 100%;
+    height: 92.5vh;
+    transition: all 0.2s linear;
+    opacity: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+  }
+  .navbar-expand-md .collapse-container:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--volk-black);
+    opacity: 0.9;
+  }
+  .navbar-expand-md .collapse-container .navbar-collapse {
+    top: 2px;
+    min-width: 250px;
+    height: 100vh;
+    display: block;
+    flex: 0;
+    padding: 0;
+  }
+  .navbar-expand-md .collapse-container .navbar-collapse .nav-item .nav-link {
+    text-align: center;
+    font-size: 2rem;
+    align-items: center;
+    justify-content: center;
+  }
+  .navbar-expand-md .collapse-container.show {
+    left: 0;
+    opacity: 1;
+  }
+}
+@media (max-width: 576px) {
+  .navbar-expand-sm {
+    border-bottom: solid 2px var(--color_2);
+    position: -webkit-sticky;
+    position: sticky;
+  }
+  .navbar-expand-sm .collapse-container {
+    position: absolute;
+    top: 100%;
+    left: -100%;
+    width: 100%;
+    height: 92.5vh;
+    transition: all 0.2s linear;
+    opacity: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+  }
+  .navbar-expand-sm .collapse-container:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--volk-black);
+    opacity: 0.9;
+  }
+  .navbar-expand-sm .collapse-container .navbar-collapse {
+    top: 2px;
+    min-width: 250px;
+    height: 100vh;
+    display: block;
+    flex: 0;
+    padding: 0;
+  }
+  .navbar-expand-sm .collapse-container .navbar-collapse .nav-item .nav-link {
+    text-align: center;
+    font-size: 2rem;
+    align-items: center;
+    justify-content: center;
+  }
+  .navbar-expand-sm .collapse-container.show {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=index.css.map*/

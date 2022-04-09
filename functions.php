@@ -12,6 +12,23 @@ if ( ! defined( 'TBM_VERSION' ) ) {
 	define( 'TBM_VERSION', '1.0.0' );
 }
 
+define( 'TBM_TEXTDOMAIN' , 'wp-theme-boilerplate-by-mike' );
+define( 'TBM_VERSION' , '1.0' );
+define( 'TBM_SITE_URL', get_site_url() . '/' );
+define( 'TBM_ACHIEVEMENTS_PATH' , get_template_directory( __FILE__ ) . DIRECTORY_SEPARATOR );
+define( 'TBM_THEME_URL' , get_template_directory_uri( __FILE__ ) . '/' );
+define( 'TBM_INCLUDES_PATH', TBM_ACHIEVEMENTS_PATH . 'inc' . DIRECTORY_SEPARATOR );
+define( 'TBM_APPLICATION_PATH', TBM_INCLUDES_PATH . 'application' . DIRECTORY_SEPARATOR );
+define( 'TBM_UTILITIES_PATH', TBM_INCLUDES_PATH . 'utilities' . DIRECTORY_SEPARATOR );
+define( 'TBM_ENQUEUE_PATH', TBM_APPLICATION_PATH . 'enqueue' . DIRECTORY_SEPARATOR );
+define( 'TBM_CONFIG_PATH', TBM_INCLUDES_PATH . 'config' . DIRECTORY_SEPARATOR );
+define( 'TBM_BUILD_PATH', TBM_ACHIEVEMENTS_PATH . 'build' . DIRECTORY_SEPARATOR );
+define( 'TBM_BUILD_URL', TBM_THEME_URL . 'build' . '/' );
+
+require_once( TBM_CONFIG_PATH . 'Config.php');
+//Bootstrap 5 Navwalker
+require_once( TBM_UTILITIES_PATH . 'bootstrap-5-wordpress-navbar-walker/functions.php' );
+
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -49,7 +66,7 @@ function wp_theme_boilerplate_by_mike_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
-			'menu-1' => esc_html__( 'Primary', 'wp-theme-boilerplate-by-mike' ),
+			'main-menu' => esc_html__( 'Primary', 'wp-theme-boilerplate-by-mike' ),
 		)
 	);
 
@@ -137,17 +154,7 @@ add_action( 'widgets_init', 'wp_theme_boilerplate_by_mike_widgets_init' );
 /**
  * Enqueue scripts and styles.
  */
-function wp_theme_boilerplate_by_mike_scripts() {
-	wp_enqueue_style( 'wp-theme-boilerplate-by-mike-style', get_stylesheet_uri(), array(), TBM_VERSION );
-	wp_style_add_data( 'wp-theme-boilerplate-by-mike-style', 'rtl', 'replace' );
-
-	wp_enqueue_script( 'wp-theme-boilerplate-by-mike-navigation', get_template_directory_uri() . '/js/navigation.js', array(), TBM_VERSION, true );
-
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
-}
-add_action( 'wp_enqueue_scripts', 'wp_theme_boilerplate_by_mike_scripts' );
+require_once(TBM_ENQUEUE_PATH . 'Enqueue.php');
 
 /**
  * Implement the Custom Header feature.
