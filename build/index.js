@@ -3148,13 +3148,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function toggleNav(button) {
-  if (jquery__WEBPACK_IMPORTED_MODULE_1___default()(button).hasClass("collapsed")) {
-    jquery__WEBPACK_IMPORTED_MODULE_1___default()(button).removeClass("collapsed");
-    jquery__WEBPACK_IMPORTED_MODULE_1___default()(button).siblings(".collapse-container").addClass("show");
+  if (jquery__WEBPACK_IMPORTED_MODULE_1___default()(button).hasClass("opened")) {
+    jquery__WEBPACK_IMPORTED_MODULE_1___default()(button).removeClass("opened");
+    jquery__WEBPACK_IMPORTED_MODULE_1___default()(button).siblings(".collapse-container").removeClass("show");
     return;
   } else {
-    jquery__WEBPACK_IMPORTED_MODULE_1___default()(button).addClass("collapsed");
-    jquery__WEBPACK_IMPORTED_MODULE_1___default()(button).siblings(".collapse-container").removeClass("show");
+    jquery__WEBPACK_IMPORTED_MODULE_1___default()(button).addClass("opened");
+    jquery__WEBPACK_IMPORTED_MODULE_1___default()(button).siblings(".collapse-container").addClass("show");
     return;
   }
 }

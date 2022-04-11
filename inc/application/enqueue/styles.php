@@ -39,6 +39,16 @@
                     ->setMedia('all')
                     ->enqueue();
 
+            $custom_css = "
+                :root {
+                    --site-main-color: " . get_theme_mod( 'site_main_color', '#428F8F' ) . ";
+                    --site-secondary-color: " . get_theme_mod( 'site_secondary_color', '#E67A68' ) . ";
+                    --site-fail-color: " . get_theme_mod( 'site_fail_color', '#FF0033' ) . ";
+                    --site-dark-color: " . get_theme_mod( 'site_dark_color', '#1D2327' ) . ";
+                    --site-light-color: " . get_theme_mod( 'site_light_color', '#FFF' ) . ";
+                }";
+            wp_add_inline_style( TBM_TEXTDOMAIN . '-assets', $custom_css );
+
         }
 
         public function admin_styles() {

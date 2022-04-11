@@ -1,6 +1,7 @@
 @mixin navbar-responsive() {
   border-bottom: solid 2px var(--color_2);
   position: sticky;
+  top: 0;
 }
 
 @mixin navbar-collapsed() {
@@ -26,7 +27,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    background-color: var(--volk-black);
+    background-color: var(--site-dark-color);
     opacity: 0.9;
   }
 
@@ -60,7 +61,9 @@
 }
 
 .main-menu {
-  background-color: #000;
+  background-color: var(--site-dark-color);
+  padding-left: 1rem;
+  padding-right: 1rem;
 
   @media (max-width: 767px) {
     //flex-direction: row-reverse;
@@ -74,10 +77,10 @@
     font-size: 0.95rem;
 
     &:hover {
-      color: #ff4b37;
+      color: var(--site-main-color);
       .navbar-brand-main,
       .navbar-brand-slogan {
-        color: #ff4b37;
+        color: var(--site-main-color);
       }
     }
 
@@ -91,33 +94,43 @@
     }
 
     .navbar-brand-main {
-      color: #fff;
+      color: var(--site-light-color);
       margin-right: 5px;
+      @media (max-width: 991px) {
+        display: block;
+      }
     }
 
     .navbar-brand-slogan {
-      color: #fff;
+      color: var(--site-light-color);
       font-size: 0.8rem;
       opacity: 0.8;
       &:before {
         content: "|";
         margin-right: 5px;
       }
+      @media (max-width: 991px) {
+        display: block;
+        &:before {
+          content: "";
+          margin-right: 0;
+        }
+      }
     }
   }
 
   .nav-item {
     .nav-link {
-      color: #fff;
+      color: var(--site-light-color);
       &:hover {
-        color: #ff4b37;
+        color: var(--site-main-color);
+      }
+      &.active {
+        color: var(--site-main-color);
+        opacity: 1;
       }
     }
-    &.active {
-      .nav-link {
-        color: #d5011d;
-      }
-    }
+
     &--icon {
       .nav-link {
         display: flex;
@@ -126,15 +139,6 @@
     }
   }
 
-  .navbar-toggler {
-    border: none;
-
-    color: #fff;
-
-    &:focus {
-      outline: none;
-    }
-  }
 
   .menu-user-image {
     img {
@@ -186,3 +190,5 @@
     }
   }
 }
+
+@import "./NavbarToggler.scss";

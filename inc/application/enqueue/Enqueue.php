@@ -62,7 +62,8 @@ class TBM_EnqueueBuilder {
             break;
             
             default:
-                wp_enqueue_style( $this->enqueue->name , $this->enqueue->path , $this->enqueue->dependencies , $this->enqueue->ver , $this->enqueue->media );
+                wp_register_style( $this->enqueue->name , $this->enqueue->path , $this->enqueue->dependencies , $this->enqueue->ver , $this->enqueue->media );
+                wp_enqueue_style( $this->enqueue->name );
             break;
         }
 

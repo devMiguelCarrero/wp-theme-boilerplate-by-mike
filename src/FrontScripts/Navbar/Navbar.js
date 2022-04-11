@@ -2,13 +2,13 @@ import "./Navbar.scss";
 import $ from "jquery";
 
 function toggleNav(button) {
-  if ($(button).hasClass("collapsed")) {
-    $(button).removeClass("collapsed");
-    $(button).siblings(".collapse-container").addClass("show");
+  if ($(button).hasClass("opened")) {
+    $(button).removeClass("opened");
+    $(button).siblings(".collapse-container").removeClass("show");
     return;
   } else {
-    $(button).addClass("collapsed");
-    $(button).siblings(".collapse-container").removeClass("show");
+    $(button).addClass("opened");
+    $(button).siblings(".collapse-container").addClass("show");
     return;
   }
 }
