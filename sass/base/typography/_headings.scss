@@ -1,3 +1,15 @@
+h1 {
+	font-family: $font__heading;
+	font-weight: $font__heading__weight;
+	-webkit-text-stroke: 2px var(--site-main-color);
+	color: transparent;
+	font-size: 4rem;
+	@media (max-width: 991px) {
+		font-size: 2.2rem;
+		text-align: center;
+	}
+}
+
 h1,
 h2,
 h3,

@@ -41,13 +41,16 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	- Media
 	- Captions
 	- Galleries
+## Scroll
 # plugins
 	- Jetpack infinite scroll
 # Utilities
 	- Accessibility
 	- Alignments
+## Site
 
 --------------------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200;600;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap");
 /*--------------------------------------------------------------
 # Generic
 --------------------------------------------------------------*/
@@ -392,9 +395,24 @@ select,
 optgroup,
 textarea {
 	color: #404040;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-family: "Roboto", sans-serif;
 	font-size: 1rem;
 	line-height: 1.5;
+}
+
+h1 {
+	font-family: "Raleway", sans-serif;
+	font-weight: 900;
+	-webkit-text-stroke: 2px var(--site-main-color);
+	color: transparent;
+	font-size: 4rem;
+}
+
+@media (max-width: 991px) {
+	h1 {
+		font-size: 2.2rem;
+		text-align: center;
+	}
 }
 
 h1,
@@ -517,15 +535,17 @@ table {
 /* Links
 --------------------------------------------- */
 a {
-	color: #4169e1;
+	color: var(--site-main-color);
+	text-decoration: none;
+	transition: color 0.2s ease-in-out;
 }
 
 a:visited {
-	color: #800080;
+	color: var(--site-main-color);
 }
 
 a:hover, a:focus, a:active {
-	color: #191970;
+	color: var(--site-secondary-color);
 }
 
 a:focus {
@@ -721,11 +741,6 @@ textarea {
 	display: block;
 }
 
-.post,
-.page {
-	margin: 0 0 1.5em;
-}
-
 .updated:not(.published) {
 	display: none;
 }
@@ -849,6 +864,30 @@ textarea {
 }
 
 /*--------------------------------------------------------------
+# Scroll
+--------------------------------------------------------------*/
+::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--site-main-color);
+	border-radius: 30px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--site-secondary-color);
+}
+
+::-webkit-scrollbar-track {
+	background: var(--site-dark-color);
+	border: 1px solid var(--site-dark-color);
+	border-radius: 30px;
+	box-shadow: inset 0px 0px 0px 0px #f0f0f0;
+}
+
+/*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/
 /* Jetpack infinite scroll
@@ -867,6 +906,125 @@ textarea {
 /*--------------------------------------------------------------
 # Utilities
 --------------------------------------------------------------*/
+/* Site
+--------------------------------------------- */
+.site-container {
+	width: 100%;
+	max-width: 1920px;
+	margin: 0 auto;
+}
+
+.site-container .site-branding .site-brand-image {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.compressed-container {
+	position: relative;
+	z-index: 10;
+	max-width: 100%;
+	width: 1275px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-block-image {
+	margin: 0;
+}
+
+.ezesports-section {
+	margin-bottom: 2.5rem;
+	display: block;
+}
+
+.subscription-square {
+	padding: 20px;
+	border: solid 1px var(--color-1);
+	text-align: center;
+}
+
+.subscription-square p {
+	margin: 0;
+}
+
+.site-header {
+	margin-bottom: 2rem;
+}
+
+@media (max-width: 992px) {
+	.site-header .site-description {
+		text-align: center;
+	}
+}
+
+.site-footer {
+	background-color: var(--site-dark-color);
+	color: #fff;
+}
+
+.site-footer .site-info {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+}
+
+.site-footer .site-copyright {
+	background-color: var(--site-main-color);
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	color: var(--site-dark-color);
+}
+
+.site-footer .site-copyright a {
+	font-weight: bold;
+	color: var(--site-secondary-color);
+}
+
+.site-footer .site-copyright a:hover, .site-footer .site-copyright a:focus, .site-footer .site-copyright a:active {
+	color: var(--site-clear-color);
+}
+
+.site-footer .footer-widget-area {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.site-footer .footer-widget-area .widget {
+	margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+	.site-footer .footer-widget-area .widget {
+		margin-bottom: 1.5rem;
+	}
+}
+
+.site-footer .wp-block-preformatted {
+	font-family: "Roboto", sans-serif;
+	background-color: var(--site-dark-color);
+	margin: 0;
+}
+
+.form-panel {
+	min-height: 60vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.form-panel .form-panel-container {
+	display: block;
+	border: solid 1px #eee;
+	padding: 15px;
+	width: 100%;
+	max-width: 450px;
+}
+
+.form-panel .hidden-form {
+	display: none;
+}
+
 /* Accessibility
 --------------------------------------------- */
 /* Text meant only for screen readers. */

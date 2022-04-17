@@ -15,7 +15,7 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+	<main id="primary" class="site-main container-fluid">
 
 		<?php
 		if ( have_posts() ) :
@@ -53,5 +53,6 @@ get_header();
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
+//Uncomment this if you want a sidebar layout
+//get_sidebar();
 get_footer();

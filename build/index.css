@@ -9,6 +9,10 @@
   background-color: var(--site-dark-color);
   padding-left: 1rem;
   padding-right: 1rem;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 99;
 }
 .main-menu .navbar-brand {
   color: #fff;
@@ -16,6 +20,12 @@
   align-items: center;
   justify-content: center;
   font-size: 0.95rem;
+}
+.main-menu .navbar-brand a {
+  text-decoration: none;
+}
+.main-menu .navbar-brand a:focus, .main-menu .navbar-brand a:visited, .main-menu .navbar-brand a:active {
+  text-decoration: none;
 }
 .main-menu .navbar-brand:hover {
   color: var(--site-main-color);

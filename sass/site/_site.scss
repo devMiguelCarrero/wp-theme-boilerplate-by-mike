@@ -1,0 +1,45 @@
+.site-container {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+
+  .site-branding {
+    .site-brand-image {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.compressed-container {
+  position: relative;
+  z-index: 10;
+  max-width: 100%;
+  width: 1275px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wp-block-image {
+  margin: 0;
+}
+
+.ezesports-section {
+  margin-bottom: 2.5rem;
+  display: block;
+}
+
+.subscription-square {
+  padding: 20px;
+  border: solid 1px var(--color-1);
+  text-align: center;
+
+  p {
+    margin: 0;
+  }
+}
+
+@import "header";
+@import "footer";
+@import "forms/forms";

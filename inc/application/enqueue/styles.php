@@ -36,13 +36,14 @@
                     ->setName( TBM_TEXTDOMAIN . '-assets-style-index' )
                     ->setPath( TBM_BUILD_URL . 'index.css' )
                     ->setVer($this->script_assets['version'])
+                    ->setDependencies( array(TBM_TEXTDOMAIN . '-assets') )
                     ->setMedia('all')
                     ->enqueue();
 
             $custom_css = "
                 :root {
-                    --site-main-color: " . get_theme_mod( 'site_main_color', '#428F8F' ) . ";
-                    --site-secondary-color: " . get_theme_mod( 'site_secondary_color', '#E67A68' ) . ";
+                    --site-main-color: " . get_theme_mod( 'site_main_color', '#2db1b1' ) . ";
+                    --site-secondary-color: " . get_theme_mod( 'site_secondary_color', '#a33636' ) . ";
                     --site-fail-color: " . get_theme_mod( 'site_fail_color', '#FF0033' ) . ";
                     --site-dark-color: " . get_theme_mod( 'site_dark_color', '#1D2327' ) . ";
                     --site-light-color: " . get_theme_mod( 'site_light_color', '#FFF' ) . ";

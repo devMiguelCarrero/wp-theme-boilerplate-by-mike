@@ -12,19 +12,26 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'wp-theme-boilerplate-by-mike' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'wp-theme-boilerplate-by-mike' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'wp-theme-boilerplate-by-mike' ), 'wp-theme-boilerplate-by-mike', '<a href="https://github.com/devMiguelCarrero/">devMiguelCarrero</a>' );
-				?>
+		<div class="site-info container-fluid">
+			<div class="compressed-container">
+				<div class="row">
+					<div class="col-12 col-md-3 footer-widget-area">
+						<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Footer Widget 1')) : ?> <?php endif; ?>
+					</div>
+					<div class="col-12 col-md-6 footer-widget-area">
+						<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Footer Widget 2')) : ?> <?php endif; ?>
+					</div>
+					<div class="col-12 col-md-3 footer-widget-area">
+						<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Footer Widget 3')) : ?> <?php endif; ?>
+					</div>
+				</div>
+			</div><!-- .compressed-container -->
 		</div><!-- .site-info -->
+		<div class="site-copyright">
+			<div class="compressed-container">
+				<?php printf( get_theme_mod( 'sec_copyright', 'Proudly powered by Wordpress, Theme: Wp Theme Boilerplate by ' . '<a href="https://github.com/devMiguelCarrero/">devMiguelCarrero</a>' ), 'WordPress' ); ?>
+			</div>
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
