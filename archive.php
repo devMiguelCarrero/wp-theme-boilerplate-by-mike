@@ -24,21 +24,27 @@ get_header();
 			</div>
 		</header><!-- .page-header -->
 
-	<?php
-		/* Start the Loop */
-		while (have_posts()) :
-			the_post();
+		<div class="wtb-section">
+			<div class="compressed-container">
+				<?php
+				/* Start the Loop */
+				while (have_posts()) :
+					the_post();
 
-			/*
+					/*
 				 * Include the Post-Type-specific template for the content.
 				 * If you want to override this in a child theme, then include a file
 				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
 				 */
-			get_template_part('template-parts/content', get_post_type());
+					get_template_part('template-parts/content', 'search');
 
-		endwhile;
+				endwhile;
 
-		the_posts_navigation();
+				the_posts_navigation();
+				?>
+			</div>
+		</div>
+	<?php
 
 	else :
 
@@ -46,9 +52,8 @@ get_header();
 
 	endif;
 	?>
-
 </main><!-- #main -->
 
 <?php
-get_sidebar();
+//get_sidebar();
 get_footer();
