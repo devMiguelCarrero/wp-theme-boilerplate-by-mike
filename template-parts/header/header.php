@@ -1,4 +1,4 @@
-<header id="masthead" class="site-header">
+<header id="masthead" class="site-header wtb-section border-section">
 	<div class="site-branding container-fluid">
 		<?php
 		the_custom_logo();

@@ -1,23 +1,51 @@
 .sticky {
-	display: block;
+  display: block;
 }
 
 .post,
 .page {
-	//margin: 0 0 1.5em;
+  //margin: 0 0 1.5em;
 }
 
 .updated:not(.published) {
-	display: none;
+  display: none;
 }
 
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+  margin: 1.5em 0 0;
+}
+
+.entry-meta {
+  &__item {
+    &:not(:last-child) {
+      &:after {
+        content: "-";
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.term-list {
+  a {
+    &:not(:last-child) {
+      &:after {
+        content: "-";
+      }
+    }
+  }
+}
+
+.article-container {
+  border: solid 1px var(--site-main-color);
+  padding: 15px;
+  margin-bottom: 2rem;
 }
 
 .page-links {
-	clear: both;
-	margin: 0 0 1.5em;
+  clear: both;
+  margin: 0 0 1.5em;
 }

@@ -22,12 +22,16 @@ define( 'TBM_APPLICATION_PATH', TBM_INCLUDES_PATH . 'application' . DIRECTORY_SE
 define( 'TBM_UTILITIES_PATH', TBM_INCLUDES_PATH . 'utilities' . DIRECTORY_SEPARATOR );
 define( 'TBM_ENQUEUE_PATH', TBM_APPLICATION_PATH . 'enqueue' . DIRECTORY_SEPARATOR );
 define( 'TBM_CUSTOMIZER_PATH', TBM_APPLICATION_PATH . 'customizer' . DIRECTORY_SEPARATOR );
+define( 'TBM_VIEW_PATH', TBM_APPLICATION_PATH . 'view' . DIRECTORY_SEPARATOR );
 define( 'TBM_WIDGET_PATH', TBM_APPLICATION_PATH . 'widget' . DIRECTORY_SEPARATOR );
 define( 'TBM_CONFIG_PATH', TBM_INCLUDES_PATH . 'config' . DIRECTORY_SEPARATOR );
+define( 'TBM_HELPERS_PATH', TBM_INCLUDES_PATH . 'helpers' . DIRECTORY_SEPARATOR );
 define( 'TBM_BUILD_PATH', TBM_ACHIEVEMENTS_PATH . 'build' . DIRECTORY_SEPARATOR );
 define( 'TBM_BUILD_URL', TBM_THEME_URL . 'build' . '/' );
 
 require_once( TBM_CONFIG_PATH . 'Config.php');
+require_once( TBM_HELPERS_PATH . 'Helpers.php' );
+require_once( TBM_VIEW_PATH . 'View.php' );
 //Bootstrap 5 Navwalker
 require_once( TBM_UTILITIES_PATH . 'bootstrap-5-wordpress-navbar-walker/functions.php' );
 

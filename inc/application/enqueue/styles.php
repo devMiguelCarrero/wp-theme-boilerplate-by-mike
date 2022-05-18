@@ -42,8 +42,9 @@
 
             $custom_css = "
                 :root {
-                    --site-main-color: " . get_theme_mod( 'site_main_color', '#2db1b1' ) . ";
-                    --site-secondary-color: " . get_theme_mod( 'site_secondary_color', '#a33636' ) . ";
+                    --site-main-color: " . get_theme_mod( 'site_main_color', '#008083' ) . ";
+                    --site-secondary-color: " . get_theme_mod( 'site_secondary_color', '#F88207' ) . ";
+                    --site-hover-color: " . get_theme_mod( 'site_hover_color', '#FCAA3A' ) . ";
                     --site-fail-color: " . get_theme_mod( 'site_fail_color', '#FF0033' ) . ";
                     --site-dark-color: " . get_theme_mod( 'site_dark_color', '#1D2327' ) . ";
                     --site-light-color: " . get_theme_mod( 'site_light_color', '#FFF' ) . ";

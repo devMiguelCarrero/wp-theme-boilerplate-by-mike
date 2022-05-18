@@ -27,7 +27,7 @@
 				</div>
 			</div><!-- .compressed-container -->
 		</div><!-- .site-info -->
-		<div class="site-copyright">
+		<div class="site-copyright container-fluid">
 			<div class="compressed-container">
 				<?php printf( get_theme_mod( 'sec_copyright', 'Proudly powered by Wordpress, Theme: Wp Theme Boilerplate by ' . '<a href="https://github.com/devMiguelCarrero/">devMiguelCarrero</a>' ), 'WordPress' ); ?>
 			</div>

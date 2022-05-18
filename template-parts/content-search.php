@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Template part for displaying results in search pages
  *
@@ -10,26 +11,25 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+	<div class="article-container">
+		<header class="entry-header">
+			<?php the_title(sprintf('<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url(get_permalink())), '</a></h2>'); ?>
+			<?php if ('post' === get_post_type()) : ?>
+				<?php wp_theme_boilerplate_by_mike_post_info(); ?>
+			<?php endif; ?>
+		</header><!-- .entry-header -->
 
-		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
+		<?php wp_theme_boilerplate_by_mike_post_thumbnail(); ?>
+
+		<div class="entry-summary">
+			<?php the_excerpt(); ?>
+		</div><!-- .entry-summary -->
+
+		<footer class="entry-footer">
 			<?php
-			wp_theme_boilerplate_by_mike_posted_on();
-			wp_theme_boilerplate_by_mike_posted_by();
+				wp_theme_boilerplate_by_mike_entry_meta();
+				wp_theme_boilerplate_by_mike_entry_footer(); 
 			?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
-
-	<?php wp_theme_boilerplate_by_mike_post_thumbnail(); ?>
-
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
-
-	<footer class="entry-footer">
-		<?php wp_theme_boilerplate_by_mike_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+		</footer><!-- .entry-footer -->
+	</div>
 </article><!-- #post-<?php the_ID(); ?> -->

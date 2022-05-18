@@ -11,10 +11,10 @@
     background-color: var(--site-main-color);
     padding-top: 1rem;
     padding-bottom: 1rem;
-    color: var(--site-dark-color);
+    color: var(--site-light-color);
     a {
-			font-weight: bold;
-      color: var(--site-secondary-color);
+      font-weight: bold;
+      color: var(--site-hover-color);
       &:hover,
       &:focus,
       &:active {
@@ -40,5 +40,26 @@
     font-family: $font__main;
     background-color: var(--site-dark-color);
     margin: 0;
+  }
+}
+
+.edit-link {
+  position: fixed;
+  z-index: 99;
+  bottom: 15px;
+  left: 15px;
+  .post-edit-link {
+    padding: 1rem;
+    border: solid 1px var(--site-main-color);
+    background-color: var(--site-light-color);
+    transition: background-color $transition_behavior,
+      border $transition_behavior;
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: var(--site-main-color);
+      color: var(--site-light-color);
+      border: solid 1px var(--site-light-color);
+    }
   }
 }
