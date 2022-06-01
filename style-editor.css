@@ -1,0 +1,15 @@
+body {
+  background-color: #C1E1ED;
+}
+
+.wp-block {
+  max-width: 1275px;
+}
+
+.wp-block[data-align=full] {
+  max-width: none;
+}
+
+.wp-block[data-align=wide] {
+  max-width: 1920px;
+}

@@ -12,6 +12,30 @@
   }
 }
 
+.alignwide {
+  margin-left: -100px;
+  margin-right: -100px;
+  @media screen and (max-width: 1275px) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.alignfull {
+  margin-left: calc(-1 * (100vw - 1285px) / 2);
+  margin-right: calc(-1 * (100vw - 1285px) / 2);
+  @media screen and (max-width: 1275px) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@each $key, $value in $font__sizes {
+  &.has-#{$key}-font-size {
+    font-size: $value;
+  }
+}
+
 .compressed-container {
   position: relative;
   z-index: 10;
@@ -21,9 +45,11 @@
   margin-right: auto;
 }
 
-.wp-block-image {
-  margin: 0;
-}
+/*.wp-block-image {
+  &:not(.alignwide, .alignfull) {
+    margin: 0;
+  }
+}*/
 
 .ezesports-section {
   margin-bottom: 2.5rem;

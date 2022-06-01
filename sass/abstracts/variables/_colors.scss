@@ -18,3 +18,18 @@ $color__border-button-hover: #ccc #bbb #aaa;
 $color__border-button-focus: #aaa #bbb #bbb;
 $color__border-input: #ccc;
 $color__border-abbr: #666;
+
+$colors: (
+  "main-color": var(--site-main-color),
+  "secondary-color": var(--site-secondary-color),
+  "third-color": var(--site-third-color),
+  "hover-color": var(--site-hover-color),
+  "fail-color": var(--site-fail-color),
+  "dark-back": var(--site-dark-color),
+  "white-text": var(--site-light-color),
+);
+
+$gradients: (
+	"main-to-secondary": linear-gradient(135deg,rgb(0,250,56) 0%,rgb(0,27,255) 100%),
+	"main-to-third": linear-gradient(115deg,rgb(250,0,0) 0%,rgb(255,225,0) 100%)
+);
