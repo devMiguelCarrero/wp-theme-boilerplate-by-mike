@@ -45,7 +45,7 @@ get_header();
 			</div>
 		</div>
 	<?php
-	else :
+	else:
 
 		get_template_part('template-parts/content', 'none');
 
